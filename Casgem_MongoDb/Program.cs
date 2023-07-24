@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
+
 builder.Services.Configure<EstateStoreDatabaseSetting>(
     builder.Configuration.GetSection(nameof(EstateStoreDatabaseSetting)));
 
@@ -33,6 +35,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(builder =>
+{
+    builder.WithOrigins("https://localhost:7217")
+           .AllowAnyHeader()
+           .AllowAnyMethod();
+});
 
 app.UseAuthorization();
 
