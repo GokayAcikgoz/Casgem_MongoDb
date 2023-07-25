@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace DataAccessLayer.Concrete
         }
         public Estate Create(Estate estate)
         {
-
+            estate.Id = ObjectId.GenerateNewId().ToString();
             _estate.InsertOne(estate);
             return estate;
         }

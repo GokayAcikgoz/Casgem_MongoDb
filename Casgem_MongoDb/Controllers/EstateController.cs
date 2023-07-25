@@ -38,7 +38,7 @@ namespace Casgem_MongoDb.Controllers
         [HttpPost]
         public ActionResult<Estate> Post([FromBody] Estate estate)
         {
-
+            estate.Id = ObjectId.GenerateNewId().ToString();
             _estateService.Create(estate);
 
             return CreatedAtAction(nameof(Get), new { id = estate.Id }, estate);

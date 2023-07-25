@@ -36,12 +36,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(builder =>
-{
-    builder.WithOrigins("https://localhost:7217")
-           .AllowAnyHeader()
-           .AllowAnyMethod();
-});
+//app.UseCors(builder =>
+//{
+//    builder.WithOrigins("https://localhost:7217")
+//           .AllowAnyHeader()
+//           .AllowAnyMethod();
+//});
 
 app.UseAuthorization();
 
