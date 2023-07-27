@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Casgem_MongoDb_Consume\Casgem_MongoDb_Consume
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Casgem_MongoDb_Consume/Casgem_MongoDb_Consume/Areas/Admin/Views/Default/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVmYXVsdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Casgem_MongoDb_Consume/Casgem_MongoDb_Consume/Areas/Admin/Views/Estate/AddEstate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXN0YXRlXEFkZEVzdGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Casgem_MongoDb_Consume/Casgem_MongoDb_Consume/Areas/Admin/Views/Estate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXN0YXRlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Casgem_MongoDb_Consume/Casgem_MongoDb_Consume/Areas/Admin/Views/Estate/UpdateEstate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXN0YXRlXFVwZGF0ZUVzdGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Casgem_MongoDb_Consume/Casgem_MongoDb_Consume/Views/Default/Get.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxHZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
