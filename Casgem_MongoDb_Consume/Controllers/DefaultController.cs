@@ -1,4 +1,5 @@
 ﻿using Casgem_MongoDb_Consume.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Drawing.Printing;
@@ -19,9 +20,9 @@ namespace Casgem_MongoDb_Consume.Controllers
         public async Task<IActionResult> Index(string p, int price, int room)
         {
 
-
+            ViewBag.userName = HttpContext.Session.GetString("UserName");
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7207/api/Estate");
+            var responseMessage = await client.GetAsync("https://localhost:7207/api/Estate/getall");
 
             if (responseMessage.IsSuccessStatusCode)
             {
@@ -87,7 +88,7 @@ namespace Casgem_MongoDb_Consume.Controllers
         {
 
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:7207/api/Estate/{id}");
+            var responseMessage = await client.GetAsync($"https://localhost:7207/api/Estate/get?id={id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

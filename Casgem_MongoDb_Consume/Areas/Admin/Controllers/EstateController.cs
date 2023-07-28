@@ -19,13 +19,16 @@ namespace Casgem_MongoDb_Consume.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            var username = HttpContext.Session.GetString("UserName");
+            ViewBag.userName = username;
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7207/api/Estate/getall");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<Estate>>(jsonData);
-                return View(values);
+                var userEstates = values.Where(e => e.UserName == username).ToList();
+                return View(userEstates);
             }
             return View();
         }
@@ -34,13 +37,17 @@ namespace Casgem_MongoDb_Consume.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> AddEstate()
         {
+            var username = HttpContext.Session.GetString("UserName");
+            ViewBag.userName = username;
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> AddEstate(Estate estate)
         {
-
+            var username = HttpContext.Session.GetString("UserName");
+                
+            estate.UserName = username;
             estate.Id = Guid.NewGuid().ToString();
 
             var jsonData = JsonConvert.SerializeObject(estate);
@@ -62,6 +69,8 @@ namespace Casgem_MongoDb_Consume.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdateEstate(string id)
         {
+
+            
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync($"https://localhost:7207/api/Estate/get?id={id}");
 
@@ -77,6 +86,10 @@ namespace Casgem_MongoDb_Consume.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateEstate(Estate estate)
         {
+            var username = HttpContext.Session.GetString("UserName");
+
+            estate.UserName = username;
+
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(estate);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");

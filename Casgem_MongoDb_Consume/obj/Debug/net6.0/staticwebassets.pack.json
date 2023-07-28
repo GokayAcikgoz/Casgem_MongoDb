@@ -5,6 +5,54 @@
       "PackagePath": "staticwebassets\\Casgem_MongoDb_Consume.bundle.scp.css"
     },
     {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\css\\style.css",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\images\\1.png",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\images\\1.png"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\images\\undraw_Work_time_re_hdyv.svg",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\images\\undraw_Work_time_re_hdyv.svg"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\index.html",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\index.html"
+    },
+    {
+      "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\Report-Login-Free\\starter-license-W3Layouts.txt",
+      "PackagePath": "staticwebassets\\Report-Login-Free\\starter-license-W3Layouts.txt"
+    },
+    {
       "Id": "C:\\Casgem_MongoDb_Consume\\Casgem_MongoDb_Consume\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

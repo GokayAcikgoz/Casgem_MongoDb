@@ -1,6 +1,7 @@
 ﻿@model List<Casgem_MongoDb_Consume.DTOs.Estate>
 @{
     Layout = null;
+    var userName = ViewData["UserName"] as string;
 }
 
 <!--
@@ -49,37 +50,28 @@ Author URL: http://w3layouts.com
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-5 mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/Default/Index">Anasayfa <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item @@listing__active">
-                            <a class="nav-link" href="listing.html">Listing</a>
+                            <a class="nav-link" href="/Admin/Estate/Index">Emlaklarım</a>
                         </li>
-                        <li class="nav-item dropdown @@property__active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Property <span class="fa fa-angle-down"></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item @@ps__active" href="property-single.html">Single property</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown @@pages__active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pages <span class="fa fa-angle-down"></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item @@about__active" href="about.html">About us</a>
-                                <a class="dropdown-item @@contact__active" href="contact.html">Contact us</a>
-                            </div>
+                        <li class="nav-item" style="margin-left:200px">
+
+                           
+
                         </li>
                     </ul>
                     <div class="top-quote mt-lg-0">
-                        <a href="#buytheme" class="btn btn-style btn-primary">
-                            <span class="fa fa-home"></span> Add
-                            listiing
-                        </a>
+                        @if (string.IsNullOrEmpty(ViewBag.userName))
+                        {
+                            <a href="/Login/Index" class="btn btn-style btn-primary">Giriş Yap</a>
+                        }
+                        else
+                        {
+                            <a href="/Logout" class="btn btn-style btn-primary">Çıkış Yap, @ViewBag.userName</a>
+                        }
                     </div>
+                    
                     <!--/search-right-->
                     <div class="search mx-3">
                         <input class="search_box" type="checkbox" id="search_box">
