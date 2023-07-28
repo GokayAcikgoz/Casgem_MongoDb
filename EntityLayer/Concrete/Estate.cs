@@ -31,5 +31,8 @@ namespace EntityLayer.Concrete
 
         [BsonElement("type")]
         public string Type { get; set; }
+
+        [BsonElement("userName")]
+        public string UserName { get; set; }
     }
 }

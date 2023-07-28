@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    public class EstateStoreDatabaseSetting : IEstateStoreDatabaseSetting
+    public class EstateStoreDatabaseSettings : IEstateStoreDatabaseSettings
     {
         public string EstateCollectionName { get; set; }
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
-    }
+		public string UserCollectionName { get; set; }
+	}
 }

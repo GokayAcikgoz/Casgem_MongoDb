@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete
     {
         private readonly IMongoCollection<Estate> _estate;
 
-        public EstateService(IEstateStoreDatabaseSetting settings, IMongoClient mongoClient)
+        public EstateService(IEstateStoreDatabaseSettings settings, IMongoClient mongoClient)
         {
             var database = mongoClient.GetDatabase(settings.DatabaseName);
             _estate = database.GetCollection<Estate>(settings.EstateCollectionName);

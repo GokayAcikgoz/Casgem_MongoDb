@@ -17,13 +17,13 @@ namespace Casgem_MongoDb.Controllers
             _estateService = estateService;
         }
 
-        [HttpGet]
+        [HttpGet("getall")]
         public ActionResult<List<Estate>> Get()
         {
             return _estateService.Get();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("get")]
         public ActionResult<Estate> Get(string id)
         {
             var essate = _estateService.Get(id);
@@ -35,7 +35,7 @@ namespace Casgem_MongoDb.Controllers
             return essate;
         }
 
-        [HttpPost]
+        [HttpPost("add")]
         public ActionResult<Estate> Post([FromBody] Estate estate)
         {
             estate.Id = ObjectId.GenerateNewId().ToString();
@@ -45,7 +45,7 @@ namespace Casgem_MongoDb.Controllers
         }
 
 
-        [HttpPut("{id}")]
+        [HttpPut("update")]
         public ActionResult Put(string id, [FromBody] Estate estate)
         {
             var existingEssate = _estateService.Get(id);
@@ -58,7 +58,7 @@ namespace Casgem_MongoDb.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete")]
         public ActionResult Delete(string id)
         {
             var essate = _estateService.Get(id);
