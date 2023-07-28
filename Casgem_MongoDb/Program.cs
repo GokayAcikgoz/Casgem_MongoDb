@@ -9,16 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-builder.Services.Configure<EstateStoreDatabaseSetting>(
-    builder.Configuration.GetSection(nameof(EstateStoreDatabaseSetting)));
+builder.Services.Configure<EstateStoreDatabaseSettings>(
+    builder.Configuration.GetSection(nameof(EstateStoreDatabaseSettings)));
 
-builder.Services.AddSingleton<IEstateStoreDatabaseSetting>(sp =>
-    sp.GetRequiredService<IOptions<EstateStoreDatabaseSetting>>().Value);
+builder.Services.AddSingleton<IEstateStoreDatabaseSettings>(sp =>
+    sp.GetRequiredService<IOptions<EstateStoreDatabaseSettings>>().Value);
 
 builder.Services.AddSingleton<IMongoClient>(s =>
-    new MongoClient(builder.Configuration.GetValue<string>("EstateStoreDatabaseSetting:ConnectionString")));
+    new MongoClient(builder.Configuration.GetValue<string>("EstateStoreDatabaseSettings:ConnectionString")));
 
 builder.Services.AddScoped<IEstateService, EstateService>();
+
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
