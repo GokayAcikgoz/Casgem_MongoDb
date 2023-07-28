@@ -1,0 +1,32 @@
+﻿@model Casgem_MongoDb_Consume.DTOs.Estate
+@{
+    ViewData["Title"] = "AddEstate";
+    Layout = "~/Areas/Admin/Views/Default/Index.cshtml";
+}
+
+<h1>Yeni Emlak Ekleme Sayfası</h1>
+<div class="container">
+    <br />
+    <form method="post">
+        <label>Başlık</label>
+        <input type="text" class="form-control" name="Title" />
+        <br />
+        <label>Fiyat</label>
+        <input type="text" class="form-control" name="Price"  />
+        <br />
+        <label>Şehir</label>
+        <input type="text" class="form-control" name="City"  />
+        <br />
+        <label>Oda Sayısı</label>
+        <input type="text" class="form-control" name="Room"  />
+        <br />
+        <label>Yapılış Yılı</label>
+        <input type="text" class="form-control" name="BuildYear" />
+        <br />
+        <label>Tip</label>
+        <input type="text" class="form-control" name="Type" />
+        <br />
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+</div>
+

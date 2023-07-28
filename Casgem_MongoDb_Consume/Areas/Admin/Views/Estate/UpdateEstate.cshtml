@@ -1,0 +1,34 @@
+﻿@model Casgem_MongoDb_Consume.DTOs.Estate
+
+@{
+    ViewData["Title"] = "UpdateEstate";
+    Layout = "~/Areas/Admin/Views/Default/Index.cshtml";
+}
+
+<h1>Emlak Güncelleme Sayfası</h1>
+<div class="container">
+    <br />
+    <form method="post">
+        @Html.HiddenFor(x => x.Id)
+
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Title, new {@class="form-control"})
+        <br />
+        @Html.Label("Fiyat")
+        @Html.TextBoxFor(x => x.Price, new {@class="form-control"})
+        <br />
+        @Html.Label("Şehir")
+        @Html.TextBoxFor(x => x.City, new {@class="form-control"})
+        <br />
+        @Html.Label("Oda Sayısı")
+        @Html.TextBoxFor(x => x.Room, new {@class="form-control"})
+        <br />
+        @Html.Label("Tip")
+        @Html.TextBoxFor(x => x.Type, new {@class="form-control"})
+        <br />
+        @Html.Label("Yapılış Yılı")
+        @Html.TextBoxFor(x => x.BuildYear, new {@class="form-control"})
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+    </form>
+</div>

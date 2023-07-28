@@ -1,0 +1,41 @@
+﻿@model List<Casgem_MongoDb_Consume.DTOs.Estate>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Default/Index.cshtml";
+
+    int count = 0;
+}
+
+<h1>Emlak Listesi</h1>
+
+<div class="container">
+    <br />
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Fiyat</th>
+            <th>Şehir</th>
+            <th>Tip</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.Title</td>
+                <td>@item.Price</td>
+                <td>@item.City</td>
+                <td>@item.Type</td>
+                <td><a href="/Admin/Estate/DeleteEstate/@item.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Admin/Estate/UpdateEstate/@item.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Admin/Estate/AddEstate" class="btn btn-info">Yeni Ev Ekle</a>
+</div>
+
+
